@@ -1,0 +1,196 @@
+/* ==========================================================================
+   M | N MARMORARIA — LAYOUTS FLEXBOX E RESPONSIVIDADE (flexbox.css)
+   ========================================================================== */
+
+/* Cabeçalho com Flexbox */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Seção Serviços: Coluna Institucional + Cartões em Flexbox */
+.services-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.services-intro {
+  flex: 0 0 21rem;
+}
+
+.services-cards-grid {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.service-card {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 11.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Seção Sobre: 3 Blocos em Flexbox */
+.about-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.about-media {
+  flex: 1 1 32%;
+}
+
+.about-content {
+  flex: 1 1 36%;
+}
+
+.about-highlights {
+  flex: 1 1 28%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Seção Projetos: Intro + Galeria de Cartões em Flexbox */
+.projects-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.projects-intro {
+  flex: 0 0 20rem;
+}
+
+.projects-gallery {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.125rem;
+}
+
+.project-card {
+  flex: 1 1 calc(50% - 1.125rem);
+  min-width: 14rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Seção Contato: Texto + Formulário em Flexbox */
+.contact-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.contact-info {
+  flex: 1 1 42%;
+}
+
+.contact-form {
+  flex: 1 1 52%;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Rodapé com Flexbox */
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-contacts {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsividade (Tablets e Celulares) */
+@media (max-width: 64rem) {
+  .services-layout,
+  .about-layout,
+  .projects-layout,
+  .contact-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .services-intro,
+  .projects-intro {
+    flex: 1 1 auto;
+  }
+
+  .footer-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 48rem) {
+  .header-container {
+    justify-content: center;
+  }
+
+  .nav-list {
+    justify-content: center;
+    gap: 1.125rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .project-card,
+  .service-card {
+    flex: 1 1 100%;
+  }
+
+  .footer-top,
+  .footer-contacts,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
